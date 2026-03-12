@@ -290,7 +290,7 @@ nav.scrolled {
 
 /* SECTIONS */
 section {
-  padding: 6rem 2rem;
+  padding: 2rem 2rem;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -433,7 +433,7 @@ section {
 .timeline-dot {
   position: absolute;
   left: -5px;
-  top: 6px;
+  top: 0px;
   width: 11px;
   height: 11px;
   border-radius: 50%;
@@ -620,10 +620,22 @@ footer {
   }
   .edu-card {
     grid-template-columns: 40px 1fr;
+    grid-template-rows: auto auto;
+    display: block;
   }
+
   .edu-cgpa {
-    display: none;
+    display: block;
+    grid-column: 2 / 3;
+    text-align: left;
+    margin-top: 0.4rem;
+    white-space: normal;
   }
+
+  .edu-period {
+    text-align: left;
+  }
+
   .hero-stats {
     gap: 2rem;
   }

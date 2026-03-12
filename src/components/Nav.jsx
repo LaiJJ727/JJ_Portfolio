@@ -6,8 +6,8 @@ function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const navItems = [
     { href: "#about", label: "About" },
-    { href: "#skills", label: "Skills" },
     { href: "#experience", label: "Experience" },
+    { href: "#skills", label: "Skills" },
     { href: "#education", label: "Education" },
     { href: "#contact", label: "Contact" },
   ];
@@ -29,8 +29,8 @@ function Nav() {
       setScrolled(window.scrollY > 40);
       const sections = [
         "about",
-        "skills",
         "experience",
+        "skills",
         "education",
         "contact",
       ];

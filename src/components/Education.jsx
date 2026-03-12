@@ -1,19 +1,56 @@
- function Education(){
+const education = [
+  {
+    period: "03/2024 – 09/2025",
+    degree: "Master of Cyber Security",
+    school: "Universiti Teknologi Malaysia",
+    location: "Johor Bahru, Malaysia",
+    cgpa: "3.8 / 4.00",
+    icon: "🛡️",
+  },
+  {
+    period: "03/2020 – 05/2023",
+    degree: "Bachelor of Software Engineering (Honours)",
+    school: "Southern University College",
+    location: "Johor Bahru, Malaysia",
+    cgpa: "3.49 / 4.00",
+    icon: "💻",
+  },
+  {
+    period: "01/2014 – 11/2019",
+    degree: "High School (Independent)",
+    school: "Pei Chun High School",
+    location: "Pontian, Malaysia",
+    cgpa: "UEC: 2A 6B 2C",
+    icon: "🎓",
+  },
+];
+
+function Education() {
   return (
-        <section id="career">
-          <h2 className="text-3xl font-semibold mb-4">Career</h2>
-          <div className="space-y-4">
-            <div className="bg-white shadow p-4 rounded">
-              <h3 className="font-bold">Master of Cyber Security</h3>
-              <p className="text-gray-600">Universiti Teknologi Malaysia</p>
-              <p className="text-gray-700">Research: API Call Sequence Analysis using CNN for Malware Detection</p>
+    <section id="education" style={{ background: "var(--bg2)" }}>
+      <div style={{ maxWidth: 900, margin: "0 auto", padding: "2rem 2rem" }}>
+        <div className="section-label">// 04</div>
+        <h2 className="section-title">Education</h2>
+        <div className="edu-grid">
+          {education.map((edu) => (
+            <div className="edu-card" key={edu.degree}>
+              <div className="edu-icon">{edu.icon}</div>
+              <div>
+                <div className="edu-degree">{edu.degree}</div>
+                <div className="edu-school">
+                  {edu.school} · {edu.location}
+                </div>
+              </div>
+              <div>
+                <div className="edu-cgpa">{edu.cgpa}</div>
+                <div className="edu-period">{edu.period}</div>
+              </div>
             </div>
-            {/* Add more experience cards here if needed */}
-          </div>
-        </section>
-  )
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
 
-export default Education
- 
- 
+export default Education;

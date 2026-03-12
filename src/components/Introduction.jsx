@@ -1,14 +1,33 @@
 import { useState, useEffect, useRef } from "react";
 import profilePhoto from "../assets/profileImg.jpg";
+import { skills } from "../data/skills";
 
 function Introduction() {
+  function YearsFrom({ startYear, suffix = "" }) {
+    const years = new Date().getFullYear() - startYear;
+    return (
+      <span>
+        {years}
+        {suffix}
+      </span>
+    );
+  }
+
   return (
     <section id="about" style={{ paddingTop: 0, maxWidth: "none" }}>
       <div className="hero">
         <div className="hero-grid" />
         <div className="hero-glow" />
         <div className="hero-glow2" />
-        <div className="hero-content hero-layout" style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: "3rem", alignItems: "center" }}>
+        <div
+          className="hero-content hero-layout"
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr auto",
+            gap: "3rem",
+            alignItems: "center",
+          }}
+        >
           {/* Left: Text */}
           <div>
             <div className="hero-tag">Software Engineer</div>
@@ -37,7 +56,9 @@ function Introduction() {
             </div>
             <div className="hero-stats">
               <div>
-                <div className="stat-num">3+</div>
+                <div className="stat-num">
+                  <YearsFrom startYear={2023} suffix="+" />
+                </div>
                 <div className="stat-label">Years Experience</div>
               </div>
               <div>
@@ -45,7 +66,7 @@ function Introduction() {
                 <div className="stat-label">Master's CGPA</div>
               </div>
               <div>
-                <div className="stat-num">12+</div>
+                <div className="stat-num">{skills.length}+</div>
                 <div className="stat-label">Tech Skills</div>
               </div>
             </div>

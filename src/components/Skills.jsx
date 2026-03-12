@@ -1,19 +1,6 @@
 import { useState, useEffect, useRef } from "react";
+import { skills } from "../data/skills";
 
-const skills = [
-  { name: "Java", level: 85 },
-  { name: "C# / .NET", level: 88 },
-  { name: "Laravel", level: 80 },
-  { name: "Vue.js", level: 78 },
-  { name: "JavaScript", level: 82 },
-  { name: "HTML / CSS", level: 85 },
-  { name: "Python", level: 72 },
-  { name: "MySQL / SQL", level: 80 },
-  { name: "RESTful API", level: 85 },
-  { name: "Machine Learning", level: 68 },
-  { name: "Bootstrap", level: 80 },
-  { name: "Oracle SQL", level: 75 },
-];
 
 function AnimatedBar({ level, color }) {
   const [width, setWidth] = useState(0);
@@ -48,9 +35,9 @@ function AnimatedBar({ level, color }) {
 
 function Skills(){
   return (
-      <section id="skills" style={{ background: "var(--bg2)" }}>
-        <div style={{ maxWidth: 900, margin: "0 auto", padding: "6rem 2rem" }}>
-          <div className="section-label">// 02</div>
+      <section id="skills" >
+        <div style={{ maxWidth: 900, margin: "0 auto", padding: "2rem 2rem" }}>
+          <div className="section-label">// 03</div>
           <h2 className="section-title">Skills</h2>
           <div className="skills-grid">
             {skills.map(({ name, level }, i) => (
