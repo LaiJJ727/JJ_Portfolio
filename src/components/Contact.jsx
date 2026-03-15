@@ -18,7 +18,8 @@ function Contact() {
             target="_blank"
             rel="noreferrer"
           >
-            <span className="contact-icon">🐙</span>
+        {/* <span className="contact-icon">🐙</span> */}   
+            <span className="contact-img"><img src="/src/assets/github-logo.png" alt="GitHub" /></span>  
             <div>
               <div className="contact-label">GitHub</div>
               <div className="contact-val">github.com/LaiJJ727</div>
