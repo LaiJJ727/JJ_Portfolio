@@ -1,6 +1,6 @@
 const experiences = [
   {
-    period: "03/2023 – Present",
+    period: "03/2026 – Present",
     role: "Software Engineer",
     company: "United Microelectronics Corporation (UMC)",
     location: "Singapore",
