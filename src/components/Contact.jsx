@@ -42,7 +42,7 @@ function Contact() {
             <span className="contact-icon">📍</span>
             <div>
               <div className="contact-label">Location</div>
-              <div className="contact-val">Singapore 510759</div>
+              <div className="contact-val">Singapore 510601</div>
             </div>
           </div>
         </div>
