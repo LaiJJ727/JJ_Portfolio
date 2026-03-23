@@ -1,3 +1,6 @@
+import githubPhoto from "../assets/github-logo.png";
+
+
 function Contact() {
   return (
     <section id="contact">
@@ -19,7 +22,7 @@ function Contact() {
             rel="noreferrer"
           >
         {/* <span className="contact-icon">🐙</span> */}   
-            <span className="contact-img"><img src="/src/assets/github-logo.png" alt="GitHub" /></span>  
+            <span className="contact-img"><img src={githubPhoto} alt="GitHub" /></span>  
             <div>
               <div className="contact-label">GitHub</div>
               <div className="contact-val">github.com/LaiJJ727</div>
